@@ -1,5 +1,3 @@
-from typing import Any, Union
-
 from bs4 import BeautifulSoup as BS
 import Link_request as linkr
 def souping(html_text, user_link):
