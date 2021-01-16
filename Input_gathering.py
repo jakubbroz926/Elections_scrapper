@@ -6,5 +6,3 @@ def data_inputs():
 
 if __name__ == "__main__":
     print("Module works")
-elif __name__ == "Input_gathering.py":
-    data_inputs()
