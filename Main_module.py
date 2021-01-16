@@ -13,12 +13,12 @@ def main():
         for i, (href, code) in enumerate(zip(hrefs[:], codes)):
             local_soup = ms.souping_local(href)
             local_info_soup = ms.gettting_city_name(local_soup)
-            local_parties = ms.local_parties(local_soup)
-            local_labels = ms.local_labels(local_soup)
             local_numbers = ms.local_numbers(local_soup)
             row = [code, local_info_soup]
             row.extend(local_numbers)
             if i == 0:
+                local_parties = ms.local_parties(local_soup)
+                local_labels = ms.local_labels(local_soup)
                 field = ["Kód obce", "Lokalita"]
                 field.extend(local_labels + local_parties)
                 csvr.creation(name_of_file, field)
